@@ -1,1 +1,12 @@
-<p> new message </p>
+<p> new message: </p>
+
+<p> To: </p>
+<%= text_field(:post, :subject, size: 25) %>
+
+<p> Subject: </p>
+<%= text_field(:post, :subject, size: 40) %>
+<p> Body: </p>
+<%= text_area(:post, :body, cols: 40, rows: 10) %>
+
+<p> this button doesn't do much yet.. </p>
+<%= button_to "Send", root_path, :method => :get %>
