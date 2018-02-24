@@ -1,4 +1,4 @@
-<p> new message: </p>
+<!-- <p> new message: </p>
 
 <p> To: </p>
 <%= text_field(:post, :subject, size: 25) %>
@@ -9,4 +9,16 @@
 <%= text_area(:post, :body, cols: 40, rows: 10) %>
 
 <p> this button doesn't do much yet.. </p>
-<%= button_to "Send", root_path, :method => :get %>
+<%= button_to "Send", root_path, :method => :get %> -->
+
+
+
+<%= form_for @message do |f| %>
+  <%= f.label :to %>:
+  <%= f.text_field :user_id %><br />
+
+  <%= f.label :body %>:
+  <%= f.text_field :body %><br />
+
+  <%= f.submit %>
+<% end %>
