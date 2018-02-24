@@ -1,0 +1,14 @@
+
+
+<p> Inbox: </p>
+
+<% @messages.each do |message| %>
+	</br>
+	<%= message.id %>
+	<%= message.body %>
+
+<% end %>
+
+</br>
+
+<%= link_to("Home", root_path) %>

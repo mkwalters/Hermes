@@ -1,11 +1,18 @@
-<p> Welcome to hermes </p>
+<p> Welcome to Hermes! </p>
 
 
 <% if user_signed_in? %>
 
-<p> we have a signed in user </p>
+<!-- <p> we have a signed in user </p> -->
+
+<%= link_to("Inbox", messages_url) %>
+</br>
+</br>
 
 <%= link_to("New Message", new_message_path) %>
+
+</br>
+</br>
 
 <%= link_to("Log out", destroy_user_session_path, method: :delete) %>
 
@@ -13,7 +20,9 @@
 <% else %>
 
 
-<%= link_to("Sign in", user_session_path) %>
+<%= link_to("Log in", user_session_path) %>
+</br>
+</br>
 
 <%= link_to("Sign up", new_user_registration_path) %>
 

@@ -5,6 +5,10 @@ class MessagesController < ApplicationController
   def show
   end
 
+  def index
+    @messages = Message.where(user_id: current_user.id).reverse
+  end
+
   def new
   	@message = Message.new
   end
