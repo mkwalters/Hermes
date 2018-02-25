@@ -17,6 +17,10 @@ class MessagesController < ApplicationController
 
     @message = Message.new(message_params)
 
+    uid = User.where({username: message_params[:user_id]})[0].id
+
+    @message.update({user_id: uid})
+
     if @message.save
       redirect_to @message
     else
